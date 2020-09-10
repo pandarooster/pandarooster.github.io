@@ -6,19 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://pandarooster.github.com">
-  <title>Archives: 2020 | 向本婷的个人博客</title>
+  <title>vue和elementUI搭建登录页和导航页并实现跳转 | 向本婷的个人博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="前端开发技术,vue,ode等前端技术共同学习实践等等">
-<meta property="og:type" content="website">
-<meta property="og:title" content="向本婷的个人博客">
-<meta property="og:url" content="https://pandarooster.github.com/archives/2020/">
+  <meta name="description" content="当我们启动vue项目的时候。默认页面是app.vue，这里我就不截图了，首先是登录页，在你的compoents文件夹里面新建一个login的文件夹，然后在里面新建一个名为login.vue的文件，文件里面我的登录页是用elementUI写的，代码如下： &lt;template&gt;     &lt;el-row type&#x3D;&quot;flex&quot; justify&#x3D;&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue和elementUI搭建登录页和导航页并实现跳转">
+<meta property="og:url" content="https://pandarooster.github.com/vue-log%20and%20nav/">
 <meta property="og:site_name" content="向本婷的个人博客">
-<meta property="og:description" content="前端开发技术,vue,ode等前端技术共同学习实践等等">
+<meta property="og:description" content="当我们启动vue项目的时候。默认页面是app.vue，这里我就不截图了，首先是登录页，在你的compoents文件夹里面新建一个login的文件夹，然后在里面新建一个名为login.vue的文件，文件里面我的登录页是用elementUI写的，代码如下： &lt;template&gt;     &lt;el-row type&#x3D;&quot;flex&quot; justify&#x3D;&amp;">
 <meta property="og:locale">
+<meta property="article:published_time" content="2020-09-10T10:41:00.000Z">
+<meta property="article:modified_time" content="2020-09-10T10:42:46.589Z">
 <meta property="article:author" content="向本婷">
-<meta property="article:tag" content="前端开发 vue node 全栈">
+<meta property="article:tag" content="vue和elementUI">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="向本婷的个人博客" type="application/atom+xml">
@@ -188,41 +190,402 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-vue-log and nav" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/vue-log%20and%20nav/" class="archive-article-date">
-        <time datetime="2020-09-10T10:41:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-10</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/vue-log%20and%20nav/" target="_blank">vue和elementUI搭建登录页和导航页并实现跳转</a>
   
+    <h1 class="article-title" itemprop="name">
+      vue和elementUI搭建登录页和导航页并实现跳转
     </h1>
   
 
 
-        <div class="article-info info-on-right">
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/vue-log%20and%20nav/" class="archive-article-date">
+        <time datetime="2020-09-10T10:41:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-10</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">2.7k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">14分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>当我们启动vue项目的时候。默认页面是app.vue，这里我就不截图了，首先是登录页，在你的compoents文件夹里面新建一个login的文件夹，然后在里面新建一个名为login.vue的文件，文件里面我的登录页是用elementUI写的，代码如下：</p>
+<pre class="line-numbers language-elementUI" data-language="elementUI"><code class="language-elementUI">&lt;template&gt;
+    &lt;el-row type&#x3D;&quot;flex&quot; justify&#x3D;&quot;center&quot;&gt;
+        &lt;el-form :model&#x3D;&quot;user&quot; label-width&#x3D;&quot;80px&quot; &gt;
+            &lt;el-form-item label&#x3D;&quot;用户名&quot;&gt;
+                &lt;el-input v-model&#x3D;&quot;user.name&quot;&gt;&lt;&#x2F;el-input&gt;
+            &lt;&#x2F;el-form-item&gt;
+            &lt;el-form-item label&#x3D;&quot;密码&quot;&gt;
+                &lt;el-input v-model&#x3D;&quot;user.pass&quot; type&#x3D;&quot;password&quot;&gt;&lt;&#x2F;el-input&gt;
+            &lt;&#x2F;el-form-item&gt;
+            &lt;el-form-item&gt;
+                    &lt;el-button type&#x3D;&quot;primary&quot; icon&#x3D;&quot;el-icon-upload&quot; @click&#x3D;&quot;Login&quot;&gt;登录&lt;&#x2F;el-button&gt;
+            &lt;&#x2F;el-form-item&gt;
+        &lt;&#x2F;el-form&gt;
+        &lt;router-view&gt;&lt;&#x2F;router-view&gt;
+    &lt;&#x2F;el-row&gt;
+&lt;&#x2F;template&gt;
+&lt;script&gt;
+export default &#123;
+  &#x2F;&#x2F; 单页面中不支持前面的data:&#123;&#125;方式
+  data () &#123;
+    &#x2F;&#x2F; 相当于以前的function data()&#123;&#125;,这是es5之前的写法，新版本可以省略掉function
+    return &#123;
+      &#x2F;&#x2F; 之前是在里面直接写username，password等等，但是这里要写return
+      &#x2F;&#x2F; 因为一个组件不管要不要被其他组件用，只要这样定义了，它就会认为可能这个组件会在其他的组件中使用
+      &#x2F;&#x2F; 比如说在这里定义了一个变量，然后把这个组件引入到A组件中，A组件中修改了这个变量
+      &#x2F;&#x2F; 同时这个组件也在B组件中引用了，这时候A里面一修改，B里面也变了，它们用的是一个值
+      &#x2F;&#x2F; 可是一般来说可能希望在不同的组件中引用的时候，使用不同的值，所以这里要用return
+      &#x2F;&#x2F; 这样在A组件和B组件分别引用这个变量的时候是不会互相影响的
+      user: &#123;
+        &#x2F;&#x2F; username: &#39;zhangsan&#39;,
+        &#x2F;&#x2F; password: &#39;123&#39;
+        &#x2F;&#x2F; 为了登录方便，可以直接在这里写好用户名和密码的值
+
+      &#125;,
+      rules: &#123;
+        name: [
+          &#123;required: true, message: &#39;用户名不能为空&#39;, trigger: &#39;blur&#39;&#125;
+        ],
+        pass: [
+          &#123;required: true, message: &#39;密码不能为空&#39;, trigger: &#39;blur&#39;&#125;
+        ]
+      &#125;
+    &#125;
+  &#125;,
+  methods: &#123;
+    Login () &#123; &#x2F;&#x2F; 一点击登录按钮，这个方法就会执行
+    &#x2F;&#x2F;   alert(JSON.stringify(this.user))&#x2F;&#x2F; 可以直接把this.user对象传给后端进行校验用户名和密码
+      this.$router.push(&#123;path: &#39;&#x2F;nav&#x2F;page1&#39; &#125;) &#x2F;&#x2F;跳转路由的方法，path是你跳转的路由名字
+    &#125;
+  &#125;
+&#125;
+&lt;&#x2F;script&gt;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>然后在你的compoents文件夹里面找到一个router的文件夹，打开里面的index.js，这是一个路由配置文件，在里面引入你刚刚创建的登录文件并配置路由，引入文件的代码如下：</p>
+<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">import login from &#39;..&#x2F;components&#x2F;login&#x2F;login.vue&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>然后配置你登录页面的路由为项目的根路由，配置代码如下</p>
+<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">routes: [
+    &#123;path: &#39;&#x2F;&#39;, name: &#39;login&#39;, component: login&#125;],&#x2F;&#x2F;&#39;&#x2F;&#39;代表设置登录页的路由为根路由，名字和组件名是你自己创建的页面组件的名字<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>接下来是创建导航页，跟登录页面一样，在compoents的文件夹下新建一个名为nav的文件夹，在里面新建一个叫nav.vue的文件，里面的代码如下：</p>
+<pre class="line-numbers language-elementUI" data-language="elementUI"><code class="language-elementUI">&lt;template&gt;
+    &lt;div style&#x3D;&quot;background-color: #EBEBEB;min-height:800px&quot;&gt;
+        &lt;div style&#x3D;&quot;width:100%;background-color: #636363; overflow: hidden&quot;&gt;
+            &lt;span class&#x3D;&quot;demonstration&quot; style&#x3D;&quot;float:left;padding-top:10px;color:white;margin-left:1%&quot;&gt;
+                网站首页
+            &lt;&#x2F;span&gt;
+            &lt;span class&#x3D;&quot;demonstration&quot; style&#x3D;&quot;float:left;padding:5px;color:white;margin-left:2%;width:15%&quot;&gt;
+                &lt;!-- &lt;el-input
+                    placeholder&#x3D;&quot;请输入&quot;
+                     suffix-icon&#x3D;&quot;search&quot;
+                    v-model&#x3D;&quot;searchCriteria&quot;
+                    :prefix-icon-click&#x3D;&quot;handleIconClick&quot;&gt;
+                &lt;&#x2F;el-input&gt; --&gt;
+            &lt;&#x2F;span&gt;
+            &lt;span class&#x3D;&quot;demonstration&quot; style&#x3D;&quot;float:right;padding-top:10px;margin-right:1%&quot;&gt;
+                &lt;el-dropdown trigger&#x3D;&quot;click&quot;&gt;
+                  &lt;span class&#x3D;&quot;el-dropdown-link&quot; style&#x3D;&quot;color:white&quot;&gt;
+                    admin&lt;i class&#x3D;&quot;el-icon-caret-bottom el-icon--right&quot;&gt;&lt;&#x2F;i&gt;
+                  &lt;&#x2F;span&gt;
+                  &lt;el-dropdown-menu slot&#x3D;&quot;dropdown&quot;&gt;
+                    &lt;el-dropdown-item&gt;个人信息&lt;&#x2F;el-dropdown-item&gt;
+                    &lt;el-dropdown-item&gt;退出登录&lt;&#x2F;el-dropdown-item&gt;
+                  &lt;&#x2F;el-dropdown-menu&gt;
+                &lt;&#x2F;el-dropdown&gt;
+            &lt;&#x2F;span&gt;
+        &lt;&#x2F;div&gt;
+        &lt;div style&#x3D;&quot;margin-top:5px&quot;&gt;
+            &lt;el-row :gutter&#x3D;&quot;10&quot;&gt;
+                &lt;el-col :xs&#x3D;&quot;4&quot; :sm&#x3D;&quot;4&quot; :md&#x3D;&quot;4&quot; :lg&#x3D;&quot;4&quot;&gt;
+                    &lt;div&gt;
+                        &lt;!-- &lt;el-menu default-active&#x3D;&quot;$route.path&quot; @select&#x3D;&quot;handleSelect&quot; class&#x3D;&quot;el-menu-vertical-demo&quot; style&#x3D;&quot;min-height:800px&quot;&gt;
+                            &lt;el-menu-item index&#x3D;&quot;1&quot;&gt;&lt;i class&#x3D;&quot;el-icon-message&quot;&gt;&lt;&#x2F;i&gt;导航一&lt;&#x2F;el-menu-item&gt;
+                            &lt;el-menu-item index&#x3D;&quot;2&quot;&gt;&lt;i class&#x3D;&quot;el-icon-menu&quot;&gt;&lt;&#x2F;i&gt;导航二&lt;&#x2F;el-menu-item&gt;
+                            &lt;el-menu-item index&#x3D;&quot;3&quot;&gt;&lt;i class&#x3D;&quot;el-icon-setting&quot;&gt;&lt;&#x2F;i&gt;导航三&lt;&#x2F;el-menu-item&gt;
+                        &lt;&#x2F;el-menu&gt; --&gt;
+                         &lt;el-menu
+      default-active&#x3D;&quot;$route.path&quot;
+      class&#x3D;&quot;el-menu-vertical-demo&quot;
+      @open&#x3D;&quot;handleOpen&quot;
+      @close&#x3D;&quot;handleClose&quot;
+      @select&#x3D;&quot;handleSelect&quot;&gt;
+      &lt;el-submenu index&#x3D;&quot;1&quot;&gt;
+        &lt;template slot&#x3D;&quot;title&quot;&gt;
+          &lt;i class&#x3D;&quot;el-icon-location&quot;&gt;&lt;&#x2F;i&gt;
+          &lt;span&gt;导航一&lt;&#x2F;span&gt;
+        &lt;&#x2F;template&gt;
+        &lt;!-- 导航一下拉菜单 --&gt;
+        &lt;el-menu-item-group&gt;
+          &lt;!-- &lt;template slot&#x3D;&quot;title&quot;&gt;分组一&lt;&#x2F;template&gt; --&gt;
+          &lt;el-menu-item index&#x3D;&quot;1-1&quot;&gt;选项1&lt;&#x2F;el-menu-item&gt;
+          &lt;el-menu-item index&#x3D;&quot;1-2&quot;&gt;选项2&lt;&#x2F;el-menu-item&gt;
+        &lt;&#x2F;el-menu-item-group&gt;
+        &lt;el-menu-item-group title&#x3D;&quot;分组2&quot;&gt;
+          &lt;el-menu-item index&#x3D;&quot;1-3&quot;&gt;选项3&lt;&#x2F;el-menu-item&gt;
+        &lt;&#x2F;el-menu-item-group&gt;
+        &lt;el-submenu index&#x3D;&quot;1-4&quot;&gt;
+          &lt;template slot&#x3D;&quot;title&quot;&gt;选项4&lt;&#x2F;template&gt;
+          &lt;el-menu-item index&#x3D;&quot;1-4-1&quot;&gt;选项1&lt;&#x2F;el-menu-item&gt;
+        &lt;&#x2F;el-submenu&gt;
+      &lt;&#x2F;el-submenu&gt;
+      &lt;el-menu-item index&#x3D;&quot;2&quot;&gt;
+        &lt;i class&#x3D;&quot;el-icon-menu&quot;&gt;&lt;&#x2F;i&gt;
+        &lt;span slot&#x3D;&quot;title&quot;&gt;导航二&lt;&#x2F;span&gt;
+      &lt;&#x2F;el-menu-item&gt;
+      &lt;!-- &lt;el-menu-item index&#x3D;&quot;3&quot; disabled&gt;
+        &lt;i class&#x3D;&quot;el-icon-document&quot;&gt;&lt;&#x2F;i&gt;
+        &lt;span slot&#x3D;&quot;title&quot;&gt;导航三&lt;&#x2F;span&gt;
+      &lt;&#x2F;el-menu-item&gt; --&gt;
+       &lt;el-menu-item index&#x3D;&quot;3&quot;&gt;
+        &lt;i class&#x3D;&quot;el-icon-document&quot;&gt;&lt;&#x2F;i&gt;
+        &lt;span slot&#x3D;&quot;title&quot;&gt;导航三&lt;&#x2F;span&gt;
+      &lt;&#x2F;el-menu-item&gt;
+      &lt;el-menu-item index&#x3D;&quot;4&quot;&gt;
+        &lt;i class&#x3D;&quot;el-icon-setting&quot;&gt;&lt;&#x2F;i&gt;
+        &lt;span slot&#x3D;&quot;title&quot;&gt;导航四&lt;&#x2F;span&gt;
+      &lt;&#x2F;el-menu-item&gt;
+    &lt;&#x2F;el-menu&gt;
+                    &lt;&#x2F;div&gt;
+                &lt;&#x2F;el-col&gt;
+                &lt;el-col :xs&#x3D;&quot;20&quot; :sm&#x3D;&quot;20&quot; :md&#x3D;&quot;20&quot; :lg&#x3D;&quot;20&quot;&gt;
+                    &lt;div&gt;
+                        &lt;div style&#x3D;&quot;border: 1px solid #A6A6A6; border-radius:6px; padding:5px; margin:2px; background-color: white&quot;&gt;
+                            &lt;el-breadcrumb separator&#x3D;&quot;&#x2F;&quot;&gt;
+                                  &lt;el-breadcrumb-item :key&#x3D;index v-for&#x3D;&quot;(item,index) in breadcrumbItems&quot;&gt;&#123;&#123;item&#125;&#125;&lt;&#x2F;el-breadcrumb-item&gt;
+                            &lt;&#x2F;el-breadcrumb&gt;
+                        &lt;&#x2F;div&gt;
+                    &lt;&#x2F;div&gt;
+                    &lt;!-- router-view显示跳转页面 --&gt;
+                        &lt;div style&#x3D;&quot;margin-top:10px&quot;&gt;
+                        &lt;router-view style&#x3D;&quot;#fff&quot;&gt;&lt;&#x2F;router-view&gt;
+                    &lt;&#x2F;div&gt;
+                &lt;&#x2F;el-col&gt;
+            &lt;&#x2F;el-row&gt;
+        &lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+&lt;&#x2F;template&gt;
+&lt;script type&#x3D;&quot;text&#x2F;ecmascript-6&quot;&gt;
+export default &#123;
+  data () &#123;
+    return &#123;
+      &#x2F;&#x2F; searchCriteria: &#39;&#39;,
+      path: &#39;&#x2F;nav&#x2F;page1&#39;,
+      breadcrumbItems: [&#39;导航一&#39;]
+    &#125;
+  &#125;,
+
+  methods: &#123;
+    handleIconClick (ev) &#123;
+      console.log(ev)
+    &#125;,
+    handleOpen (key, keyPath) &#123;
+      console.log(key, keyPath)
+    &#125;,
+    handleClose (key, keyPath) &#123;
+      console.log(key, keyPath)
+    &#125;,
+    handleSelect (key, keyPath) &#123;
+      switch (key) &#123;
+        case &#39;1&#39;:
+          this.$router.push(&#39;&#x2F;nav&#x2F;page1&#39;)
+          this.breadcrumbItems &#x3D; [&#39;导航一&#39;]
+          break
+        case &#39;2&#39;:
+          this.$router.push(&#39;&#x2F;nav&#x2F;page2&#39;)
+          this.breadcrumbItems &#x3D; [&#39;导航二&#39;]
+          break
+        case &#39;3&#39;:
+          this.$router.push(&#39;&#x2F;nav&#x2F;page3&#39;)
+          this.breadcrumbItems &#x3D; [&#39;导航三&#39;]
+          break
+        case &#39;4&#39;:
+          this.$router.push(&#39;&#x2F;nav&#x2F;Page4&#39;)
+          this.breadcrumbItems &#x3D; [&#39;导航四&#39;]
+          break
+      &#125;
+    &#125;
+
+  &#125;
+&#125;
+&lt;&#x2F;script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这里面的page1，page2，page3，page4四个页面在compoents中创建，page1.vue里面的代码如下：</p>
+<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;template&gt;
+    &lt;div&gt;
+        这是第一个页面
+    &lt;&#x2F;div&gt;
+&lt;&#x2F;template&gt;
+&lt;script type&#x3D;&quot;text&#x2F;ecmascript-6&quot;&gt;
+export default &#123;
+  data () &#123;
+    return &#123;&#125;
+  &#125;
+&#125;
+&lt;&#x2F;script&gt;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这是page1文件，在导航菜单的右边显示，你可以把不同的页面写上不同的文字以示区分，当然我们也要在index.js引入这些组件，完整的引入代码如下：</p>
+<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">import Vue from &#39;vue&#39;
+&#x2F;&#x2F; eslint-disable-next-line import&#x2F;no-duplicates
+import Router from &#39;vue-router&#39;
+&#x2F;&#x2F; eslint-disable-next-line import&#x2F;no-duplicates
+import VueRouter from &#39;vue-router&#39;
+import nav from &#39;..&#x2F;components&#x2F;nav&#x2F;nav.vue&#39;
+import login from &#39;..&#x2F;components&#x2F;login&#x2F;login.vue&#39;
+import page1 from &#39;..&#x2F;components&#x2F;page1.vue&#39;
+import page2 from &#39;..&#x2F;components&#x2F;page2.vue&#39;
+import page3 from &#39;..&#x2F;components&#x2F;page3.vue&#39;
+import page4 from &#39;..&#x2F;components&#x2F;page4.vue&#39;
+Vue.use(Router)
+&#x2F;&#x2F; 解决多次重复访问报错的问题
+const originalPush &#x3D; VueRouter.prototype.push
+VueRouter.prototype.push &#x3D; function push (location) &#123;
+  return originalPush.call(this, location).catch(err &#x3D;&gt; err)
+&#125;
+
+export default new Router(&#123;
+  &#x2F;&#x2F; base: &#39;login&#39;,
+  routes: [
+    &#123;path: &#39;&#x2F;&#39;, name: &#39;login&#39;, component: login&#125;,
+    &#123;
+      path: &#39;&#x2F;nav&#39;,
+      name: &#39;nav&#39;,
+      &#x2F;&#x2F; redirect: &#39;&#x2F;nav&#39;,
+      component: nav,
+      children: [&#123;
+        path: &#39;page1&#39;, name: &#39;page1&#39;, component: page1
+      &#125;,
+      &#123;
+        path: &#39;page2&#39;, component: page2
+      &#125;,
+      &#123;
+        path: &#39;page3&#39;, component: page3
+      &#125;,
+      &#123;
+        path: &#39;page4&#39;, component: page4
+      &#125;]
+    &#125;]
+&#125;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这里有一段代码：</p>
+<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&#x2F;&#x2F; 解决多次重复访问报错的问题
+const originalPush &#x3D; VueRouter.prototype.push
+VueRouter.prototype.push &#x3D; function push (location) &#123;
+  return originalPush.call(this, location).catch(err &#x3D;&gt; err)
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>因为我运行代码的时候总是会重复访问路由，然后浏览器总会报错，所以我加上了这一句，当然里面的vueRouter也是需要引入的，引入代码如下：</p>
+<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">import VueRouter from &#39;vue-router&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>但是你这样引入它会一直报错，这时候你只需要加上这两句就可以了</p>
+<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&#x2F;&#x2F; eslint-disable-next-line import&#x2F;no-duplicates
+&#x2F;&#x2F; eslint-disable-next-line import&#x2F;no-duplicates<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+<p>这样登录页就可以直接跳转导航页了，顺便说一句elementUI不是vue自带的，需要自行下载配置，配置和引入我就不多做说明了，请自行百度</p>
+<p>接下来就是输入npm run dev查看效果了</p>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/weixin.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          向本婷
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://pandarooster.github.com/vue-log and nav/" title="vue和elementUI搭建登录页和导航页并实现跳转" target="_blank">https://pandarooster.github.com/vue-log and nav/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -234,94 +597,128 @@
 		</ul>
 	</div>
 
-          
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://pandarooster.github.com/vue-log%20and%20nav/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/vue-eslinterror/" class="archive-article-date">
-        <time datetime="2020-08-26T05:40:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-26</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/vue-eslinterror/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于vue的eslint常出现的错误的解决办法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/vue-eslinterror/" target="_blank">关于vue的eslint常出现的错误的解决办法</a>
-  
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">vue的eslint</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-404">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/404/" class="archive-article-date">
-        <time datetime="2020-08-22T08:41:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-22</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/404/" target="_blank">404</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+
+<section id="comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname =
+    'true'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by
+      Disqus.</a></noscript>
+</section>
+
+
+
+
+
+
 
 
           </div>
@@ -362,8 +759,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
