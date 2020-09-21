@@ -6,7 +6,7 @@
   <link href="https://pandarooster.github.com/atom.xml" rel="self"/>
   
   <link href="https://pandarooster.github.com/"/>
-  <updated>2020-09-10T10:42:46.589Z</updated>
+  <updated>2020-09-21T07:01:30.433Z</updated>
   <id>https://pandarooster.github.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue and axios</title>
+    <link href="https://pandarooster.github.com/vue-and-axios/"/>
+    <id>https://pandarooster.github.com/vue-and-axios/</id>
+    <published>2020-09-21T06:37:17.000Z</published>
+    <updated>2020-09-21T07:01:30.433Z</updated>
+    
+    <content type="html"><![CDATA[<p>我已经用vue搭好了最基本的导航页，但是我们如何访问后台接口呢，这里我们需要安装和配置一个插件axios，安装和配置命令如下：</p><p>安装：</p><pre class="line-numbers language-安装axios" data-language="安装axios"><code class="language-安装axios">npm install axios --save dev<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>找到你的main.js文件，在里面这样配置：</p><pre class="line-numbers language-在main.js里面配置axios" data-language="在main.js里面配置axios"><code class="language-在main.js里面配置axios">import axios from &#39;axios&#39; &#x2F;&#x2F; 引入axios进行地址访问Vue.prototype.$http &#x3D; axios<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>不过光用axios是不够的，如果你需要将后端需要的值用对象传给后端的话，你还需要用到qs</p><pre class="line-numbers language-安装配置qs" data-language="安装配置qs"><code class="language-安装配置qs">import qs from &#39;qs&#39;Vue.prototype.$qs &#x3D; qs<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>配置好这些，首先你要访问你的后台，找到你的config文件下的index.js，找到里面的proxyTable，在里面这样写：</p><pre class="line-numbers language-连接后台" data-language="连接后台"><code class="language-连接后台">proxyTable: &#123;     &#x2F;&#x2F; 连接后台     &#39;&#x2F;api&#39;:&#123;      target:&quot;这里是你要访问的后台地址&quot;,     &#x2F;&#x2F;后台地址      changeOrigin:true,                              &#x2F;&#x2F;跨域代理      pathRewrite: &#123;         &#39;^&#x2F;api&#39;:&quot;&quot;       &#125;    &#125;   &#125;,<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>当然你还需要访问接口，在你的页面中你需要这样写：</p><pre class="line-numbers language-none"><code class="language-none">export default&#123;  created () &#123;    this.loadData()  &#125;,  methods: &#123;    loadData () &#123;      this.$http.post(&#39;&#x2F;api&#x2F;index&#39;,&#x2F;&#x2F; &#x2F;api代表你的后台地址，     &#x2F;index代表你要访问的接口名称        this.$qs.stringify(&#123;          &#39;productEnName&#39;: &#39;ALM&#39;           &#39;password&#39;: this.fromlist.password        &#125;)&#x2F;&#x2F;qs.stringify是qs库里将对象序列化变成用&amp;拼接的一个方法，里面是你要传给后端的对象      )        .then(this.PostFrommsg)        .catch((err) &#x3D;&gt; &#123; console.log(err) &#125;)    &#125;&#125;&#x2F;&#x2F;这条语句代表对异常的处理&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>这里需要注意的一个点是axios里面的$http和qs使用都需要用this，否则就需要加上import语句在里面进行局部引入，比如使用axios如果不加this就需要在里面加入import axios from ‘axios’这样的语句进行引入。</p><p>那么通过以上的步骤就可以访问后端接口了</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;我已经用vue搭好了最基本的导航页，但是我们如何访问后台接口呢，这里我们需要安装和配置一个插件axios，安装和配置命令如下：&lt;/p&gt;
+&lt;p&gt;安装：&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-安装axios&quot; data-language=&quot;</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>vue和elementUI搭建登录页和导航页并实现跳转</title>
