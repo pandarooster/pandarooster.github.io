@@ -44,7 +44,26 @@
   
   
 
+<script>
+  (function () {
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    } else {
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  })();
 
+</script>
+
+
+
+  
+    <script src="/lib/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
   
 
 </head>
@@ -56,7 +75,7 @@
       
 
 
-<div class="overlay" style="background: #4d4d4d;"></div>
+<div class="overlay" style="background: #4d4d4d;background: url('/img/biubiubiu.gif') no-repeat ;"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -72,7 +91,7 @@
 			
 				<li><a href="/" target="_blank">主页</a></li>
 			
-				<li><a href="https://zhousiwei.gitee.io/ibooks/" target="_blank">技术笔记</a></li>
+				<li><a href="https://gitee.com/xiangben" target="_blank">技术笔记</a></li>
 			
 				<li><a href="/tags/%E9%9A%8F%E7%AC%94/" target="_blank">随笔</a></li>
 			
@@ -96,17 +115,29 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" href="#" title="GitHub" target="_blank"><i class="icon-github"></i></a>
+					<a class="github" href="https://github.com/pandarooster" title="GitHub" target="_blank"><i class="icon-github"></i></a>
 				
-					<a class="gitee" href="#" title="码云" target="_blank"><i class="icon-gitee"></i></a>
+					<a class="gitee" href="https://gitee.com/xiangben" title="码云" target="_blank"><i class="icon-gitee"></i></a>
 				
-					<a class="jianshu" href="#" title="简书" target="_blank"><i class="icon-jianshu"></i></a>
+					<a class="jianshu" href="https://www.jianshu.com/u/533a7edfe7b1" title="简书" target="_blank"><i class="icon-jianshu"></i></a>
 				
-					<a class="cnblog" href="#" title="博客园" target="_blank"><i class="icon-cnblog"></i></a>
+					<a class="zhihu" href="https://www.zhihu.com/people/xiang-shu-you-ni" title="知乎" target="_blank"><i class="icon-zhihu"></i></a>
 				
 					<a class="mail" href="/1610441191@qq.com" title="NULL" target="_blank"><i class="icon-mail"></i></a>
 				
 			</div>
+		
+			
+			
+			
+			
+			<div>
+				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="240" height="86" src="//music.163.com/outchain/player?type=2&id=531270039&auto=1&height=66"></iframe>
+			</div>
+			
+				
+				<p style="font-size: 12px;">这似乎是首纯音乐，请尽情的欣赏它吧！<p>
+			
 		
 		</nav>
 	</header>		
@@ -117,7 +148,7 @@
       
       
       <a class="forkMe" style="position:absolute;z-index:999;top:0;right:0.5em;" 
-        href="https://github.com/JoeyBling/hexo-theme-yilia-plus" target="_blank">
+        href="https://github.com/pandarooster" target="_blank">
         <img src="/img/forkme.png"
           class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
       
@@ -151,13 +182,13 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="GitHub"><i class="icon-github"></i></a>
+						<a class="github" target="_blank" href="https://github.com/pandarooster" title="GitHub"><i class="icon-github"></i></a>
 			        
-						<a class="gitee" target="_blank" href="#" title="码云"><i class="icon-gitee"></i></a>
+						<a class="gitee" target="_blank" href="https://gitee.com/xiangben" title="码云"><i class="icon-gitee"></i></a>
 			        
-						<a class="jianshu" target="_blank" href="#" title="简书"><i class="icon-jianshu"></i></a>
+						<a class="jianshu" target="_blank" href="https://www.jianshu.com/u/533a7edfe7b1" title="简书"><i class="icon-jianshu"></i></a>
 			        
-						<a class="cnblog" target="_blank" href="#" title="博客园"><i class="icon-cnblog"></i></a>
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/xiang-shu-you-ni" title="知乎"><i class="icon-zhihu"></i></a>
 			        
 						<a class="mail" target="_blank" href="/1610441191@qq.com" title="NULL"><i class="icon-mail"></i></a>
 			        
@@ -170,7 +201,7 @@
 				
 					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a target="_blank" rel="noopener" href="https://zhousiwei.gitee.io/ibooks/">技术笔记</a></li>
+					<li style="width: 33.333333333333336%"><a target="_blank" rel="noopener" href="https://gitee.com/xiangben">技术笔记</a></li>
 		        
 					<li style="width: 33.333333333333336%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 		        
@@ -215,7 +246,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="archive-article-title" href="/vue-and-axios/" target="_blank">关于vue的eslint常出现的错误的解决办法</a>
+	  <a class="archive-article-title" href="/vue-and-axios/" target="_blank">vue和axios</a>
   
     </h1>
   
@@ -435,7 +466,7 @@
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="https://zhousiwei.gitee.io/ibooks/" target="_blank" class="search-title" title="记录工作和学习过程中的笔记前端开发、vue、node等学习笔记">
+              <a href="https://github.com/pandarooster" target="_blank" class="search-title" title="记录工作和学习过程中的笔记前端开发、vue、node等学习笔记">
                 
                   <img src="https://zhousiwei.gitee.io/ibooks/favicon.ico">
                 
@@ -444,7 +475,7 @@
             </li>
           
             <li class="search-li">
-              <a href="https://github.com/JoeyBling" target="_blank" class="search-title" >
+              <a href="https://github.com/pandarooster" target="_blank" class="search-title" >
                 
                   <i class="icon-link icon"></i>
                 
@@ -453,7 +484,7 @@
             </li>
           
             <li class="search-li">
-              <a href="https://gitee.com/zhousiwei" target="_blank" class="search-title" >
+              <a href="https://gitee.com/xiangben" target="_blank" class="search-title" >
                 
                   <i class="icon-link icon"></i>
                 
@@ -462,20 +493,11 @@
             </li>
           
             <li class="search-li">
-              <a href="https://www.jianshu.com/u/02cbf31a043a" target="_blank" class="search-title" >
+              <a href="https://www.jianshu.com/u/533a7edfe7b1" target="_blank" class="search-title" >
                 
                   <i class="icon-link icon"></i>
                 
                 简书
-              </a>
-            </li>
-          
-            <li class="search-li">
-              <a href="https://blog.csdn.net/qq_30930805" target="_blank" class="search-title" >
-                
-                  <i class="icon-link icon"></i>
-                
-                CSDN
               </a>
             </li>
           
@@ -564,11 +586,40 @@
   </div>
 
   
+<script type="text/javascript" src="/plugins/TweenMax/TweenMax.min.js"></script>
+<script type="text/javascript" src="/plugins/TweenMax/HoverImg.js"></script>
+
+<script>
+
+
+  var hoverEffect = {
+    "subNav": ".left-col .social a"
+  }
+
+
+  for (var x in hoverEffect) {
+    // 初始化data-img属性值
+    let $em = document.querySelectorAll(hoverEffect[x]);
+    $em.forEach(($a) => {
+      //console.log($a.href);
+      if (isImageType($a.href)) {
+        $a.setAttribute("data-img", $a.href)
+      }
+    })
+    // 实现悬停元素预览图片效果
+    let $a = document.querySelectorAll(hoverEffect[x] + "[data-img]");
+    $a.forEach(($em) => {
+      new HoverImgFx1($em)
+    })
+  }
+
+</script>
+
   
 <script type="text/javascript" src="/plugins/activate-power-mode/activate-power-mode.js"></script>
 <script>
   POWERMODE.colorful = true; // make power mode colorful
-  POWERMODE.shake = false; // turn off shake
+  POWERMODE.shake = true; // turn off shake
   document.body.addEventListener('input', POWERMODE);
 </script>
 
@@ -576,6 +627,66 @@
   <!-- <script async type="text/javascript" size="90" alpha="0.2" zIndex="0" src="/plugins/ribbon.js/ribbon.min.js"></script> -->
   
   
+    <script type="text/javascript" src="/plugins/live2d-widget.js/L2Dwidget.min.js"></script>
+<script type="text/javascript">
+  /**
+   * 完整配置请参考：https://l2dwidget.js.org/docs/class/src/index.js~L2Dwidget.html#instance-method-init
+   */
+  var pluginModelPath = "assets/", // 模型的文件路径，无需更改
+    pluginRootPath = "/live2d_models/"; // 插件的路径，无需更改
+  //特定的模型json文件名称
+  var modelPathJson = {
+    "epsilon2_1": "Epsilon2.1",
+    "gf": "Gantzert_Felixander",
+    "haru/01": "haru01",
+    "haru/02": "haru02",
+    "nietzsche": "nietzche"
+  }
+
+  
+    var modelName = "hibiki";
+  
+
+  var modelJsonPath = "";
+  if (modelPathJson[modelName]) {
+    modelJsonPath = pluginRootPath + modelName + "/" + pluginModelPath + modelPathJson[modelName] +
+      ".model.json";
+  } else {
+    modelJsonPath = pluginRootPath + modelName + "/" + pluginModelPath + modelName + ".model.json";
+  }
+  L2Dwidget.init({
+    model: {
+      jsonPath: modelJsonPath
+    },
+    display: {
+       position: "right", 
+       width: 145, 
+       height: 315, 
+       hOffset: 50, 
+      
+    },
+    mobile: {
+      
+       scale: 0.6 
+    },
+    react: {
+       opacity: 0.8 
+    }
+  })
+
+</script>
+
+  
+  
+  <script type="text/javascript" src="/lib/snow.js"></script>
+  <script type="text/javascript" src="/lib/jquery-2.1.4.min.js"></script>
+  <script>
+    snow.down();
+    $(window).resize(function() {
+      $("canvas").css("z-index","500").remove();
+      snow.down();
+    });
+  </script>
   
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 
